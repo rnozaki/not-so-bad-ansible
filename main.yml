@@ -14,10 +14,11 @@
   roles:
     - install_tomcat
 
-- hosts: apps
-  gather_facts: no
-  roles:
-    - deploy_app
+### Should be able to remove as the functions here are done on the install_tomcat role ###
+# - hosts: apps
+#   gather_facts: no
+#   roles:
+#     - deploy_app
 
 - hosts: appdbs
   gather_facts: no
