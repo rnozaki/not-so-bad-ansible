@@ -1,0 +1,11 @@
+== Overview
+
+This is a based on the bad-ansible project, after fixed by Tony.
+
+I only did minor changes, as the refactoring done by Tony transformed the original "bad example" into something much better (naturally, as this was his purpose)
+
+=== My changes
+
+* I noticed that the role deploy_app does exactly the same thing that the role install_tomcat ("same thing" refers to the directory creation and copying the template file to index.html, not installing tomcat), so:
+** I removed the deploy_app role
+** Created a templates directory under the role install_tomcat, to contain the file index.html.j2
